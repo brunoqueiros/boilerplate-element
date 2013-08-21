@@ -2,14 +2,31 @@
 		 attributes="theme width height showinfo loop end color autoplay autohide src enablejsapi">
 
 	<template>
-		<iframe type="text/html" width="{{width}}" height="{{height}}"
-		  src="{{src}}?theme={{theme}}&amp;showinfo={{showinfo}}&amp;loop={{loop}}&amp;end={{end}}&amp;color={{color}}&amp;autoplay={{autoplay}}&amp;autohide={{autohide}}&amp;enablejsapi={{enablejsapi}}"
-		  frameborder="0"></iframe>
+		<template if="{{src == 'http://www.youtube.com/embed/'}}">
+			<p class="youtube-element-error">Inform the url of the video, e g: <code class="youtube-element-code">&lt;youtube src="http://www.youtube.com/embed/M7lc1UVf-VE"&gt;</code></p>
+		</template>
+
+		<template if="{{src != 'http://www.youtube.com/embed/'}}">
+			<iframe type="text/html" width="{{width}}" height="{{height}}"
+			  src="{{src}}?theme={{theme}}&amp;showinfo={{showinfo}}&amp;loop={{loop}}&amp;end={{end}}&amp;color={{color}}&amp;autoplay={{autoplay}}&amp;autohide={{autohide}}&amp;enablejsapi={{enablejsapi}}"
+			  frameborder="0"></iframe>
+		</template>
+
+		<style>
+			.youtube-element-error {
+				font-size: 12px; 
+				color: #171717;
+			}
+
+			.youtube-element-code {
+				font-style: italic;
+			}
+		</style>
 	</template>
 
 	<script>
 		Polymer('youtube', {
-			src         : 'http://www.youtube.com/embed/M7lc1UVf-VE',
+			src         : 'http://www.youtube.com/embed/',
 			theme       : 'dark',
 			width       : 500,
 			height      : 300,
