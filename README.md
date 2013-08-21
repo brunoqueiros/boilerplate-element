@@ -8,7 +8,7 @@ TODO: Write a project description
 
 ![My Element]()
 
-> [Check it live](http://customelements.github.io/boilerplate-element).
+> [Check it live](http://brunoqueiros.github.io/youtube-element/).
 
 ## Usage
 
