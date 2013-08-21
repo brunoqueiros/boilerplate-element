@@ -1,0 +1,46 @@
+<polymer-element name="youtube"
+		 attributes="theme width height showinfo loop end color autoplay autohide src enablejsapi">
+
+	<template>
+		<iframe type="text/html" width="{{width}}" height="{{height}}"
+		  src="{{src}}?theme={{theme}}&amp;showinfo={{showinfo}}&amp;loop={{loop}}&amp;end={{end}}&amp;color={{color}}&amp;autoplay={{autoplay}}&amp;autohide={{autohide}}&amp;enablejsapi={{enablejsapi}}"
+		  frameborder="0"></iframe>
+	</template>
+
+	<script>
+		Polymer('youtube', {
+			src         : 'http://www.youtube.com/embed/M7lc1UVf-VE',
+			theme       : 'dark',
+			width       : 500,
+			height      : 300,
+			showinfo    : 1,
+			loop        : 0,
+			end         : 0,
+			color       : 'red',
+			autoplay    : 0,
+			autohide    : 2,
+			enablejsapi : 1,
+
+			created: function () {
+				this.src = 'http://www.youtube.com/embed/' + this.getVideoID();
+			},
+
+			getVideoID: function () {
+				var splitURL,
+					splitCount,
+					videoID;
+
+				splitURL = this.src.split('v=');
+				if (splitURL.length < 2) {
+					splitURL   = this.src.split('/')
+				} 
+
+				splitCount = splitURL.length;
+				videoID    = splitURL[splitCount - 1];
+
+				return videoID;
+			}
+		});
+	</script>
+
+</polymer-element>
