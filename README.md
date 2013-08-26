@@ -32,7 +32,7 @@ Web Component wrapper for Youtube's player using Polymer.
 
 Attribute    | Options         | Default                                    | Description
 ---          | ---             | ---                                        | ---
-`src`        | *string*        | ``                                         | ** Required ** URL specifies the content that the player will load 
+`src`        | *string*        | ``                                         | **Required** URL specifies the content that the player will load 
 `theme`      | `dark`, `light` | `dark`                                     | Player controls theme
 `width`      | *int*           | `640`                                      | The width of the player
 `height`     | *int*           | `390`                                      | The height of the player
@@ -46,8 +46,8 @@ Attribute    | Options         | Default                                    | De
 ### Autohide
 Values: 2 (default), 1, and 0. This parameter indicates whether the video controls will automatically hide after a video begins playing. The default behavior (autohide=2) is for the video progress bar to fade out while the player controls (play button, volume control, etc.) remain visible.
 
--If this parameter is set to 1, then the video progress bar and the player controls will slide out of view a couple of seconds after the video starts playing. They will only reappear if the user moves her mouse over the video player or presses a key on her keyboard.
--If this parameter is set to 0, the video progress bar and the video player controls will be visible throughout the video and in fullscreen.
+- If this parameter is set to 1, then the video progress bar and the player controls will slide out of view a couple of seconds after the video starts playing. They will only reappear if the user moves her mouse over the video player or presses a key on her keyboard.
+- If this parameter is set to 0, the video progress bar and the video player controls will be visible throughout the video and in fullscreen.
 
 
 > See Youtube' [official documentation](https://developers.google.com/youtube/iframe_api_reference).
