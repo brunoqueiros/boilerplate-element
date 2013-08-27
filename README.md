@@ -25,14 +25,14 @@ Web Component wrapper for Youtube's player using Polymer.
 3. Start using it!
 
 	```html
-	<youtube src="http://www.youtube.com/watch?v=3P5QP5t0Bus"></youtube>
+	<youtube videoid="3P5QP5t0Bus"></youtube>
 	```
 
 ## Options
 
 Attribute    | Options         | Default                                    | Description
 ---          | ---             | ---                                        | ---
-`src`        | *string*        | ``                                         | **Required** URL specifies the content that the player will load 
+`videoid`    | *string*        | ``                                         | **Required** URL specifies the content that the player will load 
 `theme`      | `dark`, `light` | `dark`                                     | Player controls theme
 `width`      | *int*           | `640`                                      | The width of the player
 `height`     | *int*           | `390`                                      | The height of the player
