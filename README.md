@@ -13,7 +13,7 @@ Web Component wrapper for Youtube's player using Polymer.
 1. Import Web Components' polyfill:
 
 	```html
-	<script src="lib/polymer.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130816/polymer.min.js"></script>
 	```
 
 2. Import Custom Element:
@@ -32,7 +32,7 @@ Web Component wrapper for Youtube's player using Polymer.
 
 Attribute    | Options         | Default                                    | Description
 ---          | ---             | ---                                        | ---
-`videoid`    | *string*        | ``                                         | **Required** URL specifies the content that the player will load 
+`videoid`    | *string*        | ``                                         | **Required** URL specifies the content that the player will load
 `theme`      | `dark`, `light` | `dark`                                     | Player controls theme
 `width`      | *int*           | `640`                                      | The width of the player
 `height`     | *int*           | `390`                                      | The height of the player
@@ -49,9 +49,7 @@ Values: 2 (default), 1, and 0. This parameter indicates whether the video contro
 - If this parameter is set to 1, then the video progress bar and the player controls will slide out of view a couple of seconds after the video starts playing. They will only reappear if the user moves her mouse over the video player or presses a key on her keyboard.
 - If this parameter is set to 0, the video progress bar and the video player controls will be visible throughout the video and in fullscreen.
 
-
 > See Youtube' [official documentation](https://developers.google.com/youtube/iframe_api_reference).
-
 
 ## Contributing
 
