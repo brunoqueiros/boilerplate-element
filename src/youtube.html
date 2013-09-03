@@ -4,18 +4,18 @@
 	<template>
 		<template if="{{videoid == 'videoid'}}">
 			<p class="youtube-element-error">Inform the url of the video, e g: <code class="youtube-element-code">&lt;youtube src="http://www.youtube.com/embed/M7lc1UVf-VE"&gt;</code></p>
+
+			<style>
+				.youtube-element-error {
+					font-size: 12px; 
+					color: #171717;
+				}
+
+				.youtube-element-code {
+					font-style: italic;
+				}
+			</style>
 		</template>
-
-		<style>
-			.youtube-element-error {
-				font-size: 12px; 
-				color: #171717;
-			}
-
-			.youtube-element-code {
-				font-style: italic;
-			}
-		</style>
 	</template>
 
 	<script>
@@ -44,6 +44,7 @@
 				iframe.width = this.width;
 				iframe.height = this.height;
 				iframe.style.border = 'none';
+				iframe.classList.add('youtube-element-video');
 				iframe.src = '//www.youtube.com/embed/' + this.videoid +
 								'?theme=' + this.theme +
 								'&amp;showinfo=' + this.showinfo +
@@ -57,5 +58,13 @@
 			}
 		});
 	</script>
+
+	<style>		
+		@media all and (max-width: 500px) {
+			.youtube-element-video {
+			    width: 100%;
+			}
+		}
+	</style>
 
 </polymer-element>
