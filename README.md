@@ -1,4 +1,4 @@
-# &lt;youtube&gt;
+# &lt;youtube-embed&gt;
 
 Web Component wrapper for Youtube's player using Polymer.
 
