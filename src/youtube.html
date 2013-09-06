@@ -1,17 +1,17 @@
-<polymer-element name="youtube"
+<polymer-element name="youtube-embed"
 		 attributes="theme width height showinfo loop end color autoplay autohide videoid enablejsapi">
 
 	<template>
 		<template if="{{videoid == 'videoid'}}">
-			<p class="youtube-element-error">Inform the url of the video, e g: <code class="youtube-element-code">&lt;youtube src="http://www.youtube.com/embed/M7lc1UVf-VE"&gt;</code></p>
+			<p class="youtube-embed-error">Inform the url of the video, e g: <code class="youtube-embed-code">&lt;youtube src="http://www.youtube.com/embed/M7lc1UVf-VE"&gt;</code></p>
 
 			<style>
-				.youtube-element-error {
+				.youtube-embed-error {
 					font-size: 12px; 
 					color: #171717;
 				}
 
-				.youtube-element-code {
+				.youtube-embed-code {
 					font-style: italic;
 				}
 			</style>
@@ -19,7 +19,7 @@
 	</template>
 
 	<script>
-		Polymer('youtube', {
+		Polymer('youtube-embed', {
 			videoid     : 'videoid',
 			theme       : 'dark',
 			width       : 500,
@@ -44,7 +44,7 @@
 				iframe.width = this.width;
 				iframe.height = this.height;
 				iframe.style.border = 'none';
-				iframe.classList.add('youtube-element-video');
+				iframe.classList.add('youtube-embed-video');
 				iframe.src = '//www.youtube.com/embed/' + this.videoid +
 								'?theme=' + this.theme +
 								'&amp;showinfo=' + this.showinfo +
@@ -61,7 +61,7 @@
 
 	<style>		
 		@media all and (max-width: 500px) {
-			.youtube-element-video {
+			.youtube-embed-video {
 			    width: 100%;
 			}
 		}
