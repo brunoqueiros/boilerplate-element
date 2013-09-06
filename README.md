@@ -25,7 +25,7 @@ Web Component wrapper for Youtube's player using Polymer.
 3. Start using it!
 
 	```html
-	<youtube videoid="3P5QP5t0Bus"></youtube>
+	<youtube-embed videoid="3P5QP5t0Bus"></youtube-embed>
 	```
 
 ## Options
