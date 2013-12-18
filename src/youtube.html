@@ -1,5 +1,5 @@
 <polymer-element name="youtube-embed"
-		 attributes="theme width height showinfo loop end color autoplay autohide videoid enablejsapi">
+		 attributes="theme width height showinfo loop end color autoplay autohide videoid rel enablejsapi">
 
 	<template>
 		<template if="{{videoid == 'videoid'}}">
@@ -31,6 +31,7 @@
 			autoplay    : 0,
 			autohide    : 2,
 			enablejsapi : 1,
+			rel			: 0,
 
 			created: function () {
 				if (this.videoid != 'videoid') {
@@ -53,6 +54,7 @@
 								'&amp;color=' + this.color +
 								'&amp;autoplay=' + this.autoplay +
 								'&amp;autohide=' + this.autohide +
+								'&amp;rel=' + this.rel +
 								'&amp;enablejsapi=' + this.enablejsapi;
 				body.appendChild(iframe);
 			}
