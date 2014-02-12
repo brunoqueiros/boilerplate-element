@@ -6,7 +6,7 @@ Web Component wrapper for Youtube's player using Polymer.
 
 ## Demo
 
-> [Check it live](http://brunoqueiros.github.io/youtube-element/).
+> [Check it live](http://brunoqueiros.github.io/youtube-embed/).
 
 ## Usage
 
