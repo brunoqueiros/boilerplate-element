@@ -14,8 +14,7 @@ module.exports = function(grunt) {
                 clone: 'bower_components/youtube-embed'
             },
             src: [
-                'bower_components/**/*',
-                '!bower_components/youtube-embed/**/*',
+                'bower_components/platform/*',
                 'demo/*', 'src/*', 'index.html'
             ]
         },
