@@ -8,20 +8,29 @@ Web Component wrapper for Youtube's player using Polymer.
 
 > [Check it live](http://brunoqueiros.github.io/youtube-embed/).
 
+## Install
+
+Install the component using [Bower](http://bower.io/):
+
+```sh
+$ bower install youtube-embed --save
+```
+
+Or [download as ZIP](https://github.com/my-user/my-repo/archive/master.zip).
 
 ## Usage
 
 1. Import Web Components' polyfill:
 
-	```html
-	<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130816/polymer.min.js"></script>
-	```
+    ```html
+    <script src="bower_components/platform/platform.js"></script>
+    ```
 
 2. Import Custom Element:
 
-	```html
-	<link rel="import" href="src/youtube.html">
-	```
+    ```html
+    <link rel="import" href="bower_components/youtube-embed/dist/youtube.html">
+    ```
 
 3. Start using it!
 
@@ -52,6 +61,40 @@ Values: 2 (default), 1, and 0. This parameter indicates whether the video contro
 - If this parameter is set to 0, the video progress bar and the video player controls will be visible throughout the video and in fullscreen.
 
 > See Youtube' [official documentation](https://developers.google.com/youtube/iframe_api_reference).
+
+## Development
+
+In order to run it locally you'll need to fetch some dependencies and a basic server setup.
+
+* Install [Bower](http://bower.io/) & [Grunt](http://gruntjs.com/):
+
+    ```sh
+    $ [sudo] npm install -g bower grunt-cli
+    ```
+
+* Install local dependencies:
+
+    ```sh
+    $ bower install && npm install
+    ```
+
+* To test your project, start the development server and open `http://localhost:8000`.
+
+    ```sh
+    $ grunt server
+    ```
+
+* To build the distribution files before releasing a new version.
+
+    ```sh
+    $ grunt build
+    ```
+
+* To provide a live demo, send everything to `gh-pages` branch.
+
+    ```sh
+    $ grunt deploy
+    ```
 
 ## Contributing
 
