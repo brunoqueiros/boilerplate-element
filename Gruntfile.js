@@ -11,11 +11,11 @@ module.exports = function(grunt) {
         },
         'gh-pages': {
             options: {
-                clone: 'bower_components/my-repo'
+                clone: 'bower_components/youtube-embed'
             },
             src: [
                 'bower_components/**/*',
-                '!bower_components/my-repo/**/*',
+                '!bower_components/youtube-embed/**/*',
                 'demo/*', 'src/*', 'index.html'
             ]
         },
