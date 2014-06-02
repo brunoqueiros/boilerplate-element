@@ -16,7 +16,7 @@ Install the component using [Bower](http://bower.io/):
 $ bower install youtube-embed --save
 ```
 
-Or [download as ZIP](https://github.com/my-user/my-repo/archive/master.zip).
+Or [download as ZIP](https://github.com/brunoqueiros/youtube-embed/archive/master.zip).
 
 ## Usage
 
