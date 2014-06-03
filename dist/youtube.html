@@ -2,7 +2,7 @@
 <link rel="import" href="../../polymer/polymer.html">
 
 <polymer-element name="youtube-embed"
-         attributes="theme width height showinfo loop end color autoplay autohide videoid rel enablejsapi">
+         attributes="theme width height showinfo loop end color autoplay autohide videoid rel enablejsapi container">
 
     <template>
         <template if="{{videoid == 'videoid'}}">
@@ -35,6 +35,7 @@
             autohide    : 2,
             enablejsapi : 1,
             rel         : 0,
+            container   : 'body',
 
             ready: function () {
                 if (this.videoid != 'videoid') {
@@ -44,7 +45,8 @@
 
             createIframe: function () {
                 var iframe = document.createElement('iframe'),
-                body = document.getElementsByTagName('body')[0];
+                    containerElement = document.querySelector(this.container);
+
                 iframe.width = this.width;
                 iframe.height = this.height;
                 iframe.style.border = 'none';
@@ -59,7 +61,7 @@
                                 '&amp;autohide=' + this.autohide +
                                 '&amp;rel=' + this.rel +
                                 '&amp;enablejsapi=' + this.enablejsapi;
-                body.appendChild(iframe);
+                containerElement.appendChild(iframe);
             }
         });
     </script>
