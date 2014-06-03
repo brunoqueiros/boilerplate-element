@@ -35,7 +35,7 @@
             autohide    : 2,
             enablejsapi : 1,
             rel         : 0,
-            container   : 'body',
+            container   : '',
 
             ready: function () {
                 if (this.videoid != 'videoid') {
@@ -44,8 +44,7 @@
             },
 
             createIframe: function () {
-                var iframe = document.createElement('iframe'),
-                    containerElement = document.querySelector(this.container);
+                var iframe = document.createElement('iframe');
 
                 iframe.width = this.width;
                 iframe.height = this.height;
@@ -61,7 +60,29 @@
                                 '&amp;autohide=' + this.autohide +
                                 '&amp;rel=' + this.rel +
                                 '&amp;enablejsapi=' + this.enablejsapi;
-                containerElement.appendChild(iframe);
+
+                this.insertIframe(iframe);
+            },
+
+            insertIframe: function (iframe) {
+                var containerElement;
+
+                if (this.container === '') {
+                    this.insertAfter(iframe, this);
+                } else {
+                    containerElement = document.querySelector(this.container);
+                    containerElement.appendChild(iframe);
+                }
+            },
+
+            insertAfter: function (newElement,targetElement) {
+                var parent = targetElement.parentNode;
+             
+                if (parent.lastchild == targetElement) {
+                    parent.appendChild(newElement);
+                } else {
+                    parent.insertBefore(newElement, targetElement.nextSibling);
+                }
             }
         });
     </script>
