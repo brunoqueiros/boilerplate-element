@@ -43,7 +43,7 @@ Or [download as ZIP](https://github.com/brunoqueiros/youtube-embed/archive/maste
 Attribute    | Options         | Default                                    | Description
 ---          | ---             | ---                                        | ---
 `videoid`    | *string*        | ``                                         | **Required** URL specifies the content that the player will load
-`container`  | *string*        | `body`                                     | The container where the iframe will be put. e.g. container="#video-container"
+`container`  | *string*        | ``                                         | The container where the iframe will be put. e.g. container="#video-container", if not inform will be put the iframe after the youtube-embed tag
 `theme`      | `dark`, `light` | `dark`                                     | Player controls theme
 `width`      | *int*           | `640`                                      | The width of the player
 `height`     | *int*           | `390`                                      | The height of the player
