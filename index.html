@@ -9,12 +9,24 @@
 
     <!-- Importing Custom Elements -->
     <link rel="import" href="src/youtube.html">
+
+    <style>
+		#video-container {
+			border: 5px solid #cc181e;
+			width: 500px;
+			height: 300px;
+		}
+    </style>
 </head>
 <body>
 
     <!-- Using Custom Elements -->
 	<youtube-embed></youtube-embed>
 	<youtube-embed videoid="DGeTTJ-rSCw" theme="light" rel="1"></youtube-embed>
+	<youtube-embed videoid="BgK_Er7WZVg" rel="1" container="#video-container"></youtube-embed>
+
+
+	<div id="video-container"></div>
 
 </body>
 </html>
