@@ -43,7 +43,7 @@ Or [download as ZIP](https://github.com/brunoqueiros/youtube-embed/archive/maste
 Attribute    | Options         | Default                                    | Description
 ---          | ---             | ---                                        | ---
 `videoid`    | *string*        | ``                                         | **Required** URL specifies the content that the player will load
-`container`  | *string*        | ``                                         | The container where the iframe will be put. e.g. container="#video-container", if not inform will be put the iframe after the youtube-embed tag
+`container`  | *string*        | ``                                         | The container where the iframe will be put. e.g. container="#video-container"
 `theme`      | `dark`, `light` | `dark`                                     | Player controls theme
 `width`      | *int*           | `640`                                      | The width of the player
 `height`     | *int*           | `390`                                      | The height of the player
@@ -53,7 +53,7 @@ Attribute    | Options         | Default                                    | De
 `color`      | `red`, `white`  | `red`                                      | The color that will be used in the player's video progress bar
 `autoplay`   | `0`, `1`        | `0`                                        | Sets whether or not the initial video will autoplay when the player loads
 `autohide`   | `0`, `1`, `2`   | `2`                                        | This parameter indicates whether the video controls will automatically hide after a video begins playing
-`rel`   | `0`, `1`   | `0`                                        | This parameter indicates whether the player should show related videos when playback of the initial video ends.
+`rel`   | `0`, `1`   | `0`                                                  | This parameter indicates whether the player should show related videos when playback of the initial video ends.
 
 ### Autohide
 Values: 2 (default), 1, and 0. This parameter indicates whether the video controls will automatically hide after a video begins playing. The default behavior (autohide=2) is for the video progress bar to fade out while the player controls (play button, volume control, etc.) remain visible.
